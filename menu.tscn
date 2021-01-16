@@ -1,9 +1,44 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://font/Cute Notes.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://menu.gd" type="Script" id=2]
 [ext_resource path="res://ressource/coins/coinss2cent.png" type="Texture" id=3]
 [ext_resource path="res://ressource/dollar/coins1dol.png" type="Texture" id=4]
+[ext_resource path="res://font/EastSeaDokdo-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0012.png" type="Texture" id=6]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0011.png" type="Texture" id=7]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0007.png" type="Texture" id=8]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0009.png" type="Texture" id=9]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0020.png" type="Texture" id=10]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0021.png" type="Texture" id=11]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0006.png" type="Texture" id=12]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0023.png" type="Texture" id=13]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0016.png" type="Texture" id=14]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0010.png" type="Texture" id=15]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0014.png" type="Texture" id=16]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0001.png" type="Texture" id=17]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0005.png" type="Texture" id=18]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0025.png" type="Texture" id=19]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0002.png" type="Texture" id=20]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0017.png" type="Texture" id=21]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0015.png" type="Texture" id=22]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0004.png" type="Texture" id=23]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0008.png" type="Texture" id=24]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0022.png" type="Texture" id=25]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0003.png" type="Texture" id=26]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0018.png" type="Texture" id=27]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0013.png" type="Texture" id=28]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0019.png" type="Texture" id=29]
+[ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0024.png" type="Texture" id=30]
+[ext_resource path="res://ressource/omg/Explosion+1.wav" type="AudioStream" id=31]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 28 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 25 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 19 ) ],
+"loop": false,
+"name": "default",
+"speed": 15.0
+} ]
 
 [sub_resource type="ParticlesMaterial" id=1]
 emission_shape = 2
@@ -19,6 +54,10 @@ scale = 0.3
 [sub_resource type="DynamicFont" id=2]
 size = 75
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 5 )
 
 [sub_resource type="ParticlesMaterial" id=3]
 flag_disable_z = true
@@ -37,6 +76,31 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 1684.1, 323.634 )
+scale = Vector2( 5.5, 5.5 )
+frames = SubResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1570.23, 815.079 )
+scale = Vector2( 7, 7 )
+frames = SubResource( 5 )
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="."]
+position = Vector2( 1144.8, 259.489 )
+scale = Vector2( 7, 7 )
+frames = SubResource( 5 )
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 409.24, 558.995 )
+scale = Vector2( 7, 7 )
+frames = SubResource( 5 )
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
+position = Vector2( 782.51, 948.495 )
+scale = Vector2( 10, 10 )
+frames = SubResource( 5 )
 
 [node name="Particles2D3" type="Particles2D" parent="."]
 position = Vector2( 940.204, -26.916 )
@@ -70,6 +134,7 @@ margin_left = -103.0
 margin_top = -27.0
 margin_right = 103.0
 margin_bottom = 27.0
+custom_fonts/font = SubResource( 4 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -91,3 +156,46 @@ lifetime = 5.5
 preprocess = 6.0
 process_material = SubResource( 3 )
 texture = ExtResource( 3 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 167.81, 179.797 )
+scale = Vector2( 6, 6 )
+frames = SubResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="Node"]
+
+[node name="Timer2" type="Timer" parent="Node"]
+
+[node name="Timer3" type="Timer" parent="Node"]
+
+[node name="Timer4" type="Timer" parent="Node"]
+
+[node name="Timer5" type="Timer" parent="Node"]
+
+[node name="Timer6" type="Timer" parent="Node"]
+[connection signal="timeout" from="Node/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Node/Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Node/Timer3" to="." method="_on_Timer3_timeout"]
+[connection signal="timeout" from="Node/Timer4" to="." method="_on_Timer4_timeout"]
+[connection signal="timeout" from="Node/Timer5" to="." method="_on_Timer5_timeout"]
+[connection signal="timeout" from="Node/Timer6" to="." method="_on_Timer6_timeout"]
