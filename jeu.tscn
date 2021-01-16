@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://jeu.gd" type="Script" id=1]
 [ext_resource path="res://persogodot.png" type="Texture" id=2]
+[ext_resource path="res://font/Cute Notes.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "débarque_dans_le_game"
@@ -33,6 +34,14 @@ tracks/0/keys = {
 "values": [ Vector2( 1000, 600 ), Vector2( -500, 600 ) ]
 }
 
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 3 )
+
 [node name="jeu" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -51,22 +60,23 @@ current = true
 zoom = Vector2( 1.2, 1.2 )
 
 [node name="acheter" type="Label" parent="."]
-margin_left = 924.682
-margin_top = 392.52
-margin_right = 1100.68
-margin_bottom = 489.52
-text = "5000"
+margin_left = 169.08
+margin_top = 165.522
+margin_right = 345.08
+margin_bottom = 262.522
+custom_fonts/font = SubResource( 3 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="argent donné" type="Label" parent="."]
-margin_left = 45.5043
-margin_top = 179.04
-margin_right = 134.504
-margin_bottom = 210.04
-text = "uyhgg
-"
+[node name="don" type="Label" parent="."]
+margin_left = 169.734
+margin_top = 230.971
+margin_right = 258.734
+margin_bottom = 261.971
+custom_fonts/font = SubResource( 4 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
