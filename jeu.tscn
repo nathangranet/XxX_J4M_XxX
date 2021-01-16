@@ -50,10 +50,10 @@ position = Vector2( 956.338, 536.537 )
 current = true
 
 [node name="acheter" type="Label" parent="."]
-margin_left = 43.6777
-margin_top = 65.8894
-margin_right = 219.678
-margin_bottom = 162.889
+margin_left = 924.682
+margin_top = 392.52
+margin_right = 1100.68
+margin_bottom = 489.52
 text = "5000"
 __meta__ = {
 "_edit_use_anchors_": false
