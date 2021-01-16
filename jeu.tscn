@@ -46,8 +46,9 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 956.338, 536.537 )
+position = Vector2( 959.166, 536.537 )
 current = true
+zoom = Vector2( 1.2, 1.2 )
 
 [node name="acheter" type="Label" parent="."]
 margin_left = 924.682
