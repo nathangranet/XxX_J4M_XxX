@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://jeu.gd" type="Script" id=1]
+[ext_resource path="res://persogodot.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "débarque_dans_le_game"
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonome:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2250, 600 ), Vector2( 1000, 600 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "se_casse"
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonome:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1000, 600 ), Vector2( -500, 600 ) ]
+}
+
+[node name="jeu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/débarque_dans_le_game" = SubResource( 1 )
+anims/se_casse = SubResource( 2 )
+
+[node name="bonome" type="Sprite" parent="."]
+position = Vector2( -500, 600 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 956.338, 536.537 )
+current = true
+
+[node name="acheter" type="Label" parent="."]
+margin_left = 43.6777
+margin_top = 65.8894
+margin_right = 219.678
+margin_bottom = 162.889
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="argent donné" type="Label" parent="."]
+margin_left = 45.5043
+margin_top = 179.04
+margin_right = 134.504
+margin_bottom = 210.04
+text = "uyhgg
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
