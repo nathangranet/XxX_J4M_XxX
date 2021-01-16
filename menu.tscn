@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://font/Cute Notes.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://menu.gd" type="Script" id=2]
+[ext_resource path="res://ressource/coins/coinss2cent.png" type="Texture" id=3]
+[ext_resource path="res://ressource/dollar/coins1dol.png" type="Texture" id=4]
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 860, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 100, 0 )
+angular_velocity = 182.07
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.3
+
+[sub_resource type="DynamicFont" id=1]
+size = 75
+font_data = ExtResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+flag_disable_z = true
+direction = Vector3( 1, -1, 0 )
+spread = 15.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 350.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.5
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D3" type="Particles2D" parent="."]
+position = Vector2( 940.204, -26.916 )
+z_index = -20
+amount = 60
+lifetime = 5.0
+preprocess = 5.0
+process_material = SubResource( 3 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -470.0
+margin_top = 200.0
+margin_right = 470.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 1 )
+text = "Cashier extreme"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -103.0
+margin_top = -27.0
+margin_right = 103.0
+margin_bottom = 27.0
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 12.6992, 1066.73 )
+amount = 50
+lifetime = 5.5
+preprocess = 6.0
+process_material = SubResource( 2 )
+texture = ExtResource( 3 )
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+position = Vector2( 1903.03, 1065.05 )
+scale = Vector2( -1, 1 )
+amount = 50
+lifetime = 5.5
+preprocess = 6.0
+process_material = SubResource( 2 )
+texture = ExtResource( 3 )
