@@ -42,6 +42,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("pay") and $bonome.position.x == 1000:
 		if rendu >= (don - buy):
 			score += 10 - (rendu - (don-buy))
+			$Particles2D.emitting = true
+			$Particles2D2.emitting = true
 		else:
 			score -= 10
 		print (rendu)
@@ -50,6 +52,4 @@ func _process(delta):
 		rendu = 0
 		$score2.text = String(score)
 		$AnimationPlayer.play("se_casse")
-		$Particles2D.emitting = true
-		$Particles2D2.emitting = true
 	$rendu.text = String(rendu)

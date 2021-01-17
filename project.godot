@@ -16,14 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="numbadjam"
-run/main_scene="res://Node2D.tscn"
+run/main_scene="res://menu.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
-window/size/fullscreen=true
 
 [input]
 
