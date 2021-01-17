@@ -85,7 +85,7 @@ margin_top = 10.347
 margin_right = 1003.99
 margin_bottom = 59.347
 custom_fonts/font = SubResource( 3 )
-text = "Score"
+text = "Money"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -289,6 +289,18 @@ margin_right = 1652.19
 margin_bottom = 1025.06
 custom_fonts/font = SubResource( 5 )
 text = "9"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rendu" type="Label" parent="."]
+margin_left = 930.826
+margin_top = 683.088
+margin_right = 970.826
+margin_bottom = 732.088
+rect_scale = Vector2( 0.5, 0.7 )
+custom_fonts/font = SubResource( 3 )
+text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }

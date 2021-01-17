@@ -50,3 +50,4 @@ func _process(delta):
 		rendu = 0
 		$score2.text = String(score)
 		$AnimationPlayer.play("se_casse")
+	$rendu.text = String(rendu)
