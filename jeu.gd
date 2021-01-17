@@ -60,4 +60,6 @@ func _on_Timer_timeout():
 	var tmp = load("res://end.tscn")
 	var inst = tmp.instance()
 	inst.score = score
-	get_tree().change_scene_to(inst)
+	inst.rect_size = Vector2(1920, 1080)
+	get_tree().set_pause(true)
+	self.add_child(inst)
