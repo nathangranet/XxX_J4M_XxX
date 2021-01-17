@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://font/Cute Notes.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://menu.gd" type="Script" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://ressource/omg/Explosion+1.wav" type="AudioStream" id=31]
 [ext_resource path="res://ressource/background.png" type="Texture" id=32]
 [ext_resource path="res://ressource/omg.png" type="Texture" id=33]
+[ext_resource path="res://ressource/[ONTIVA.COM]-No Copyright Epic Dubstep Premium Royalty Free Music-HQ.ogg" type="AudioStream" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -204,6 +205,11 @@ stream = ExtResource( 31 )
 [node name="omg" type="Sprite" parent="."]
 position = Vector2( 273.778, 733.664 )
 texture = ExtResource( 33 )
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 34 )
+autoplay = true
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="Node/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Node/Timer2" to="." method="_on_Timer2_timeout"]
 [connection signal="timeout" from="Node/Timer3" to="." method="_on_Timer3_timeout"]
