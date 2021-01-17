@@ -68,3 +68,7 @@ func _on_Timer6_timeout():
 	$AudioStreamPlayer6.playing = false
 	$AudioStreamPlayer6.playing = true
 	$Node/Timer6.start(rand_range(2, 5))
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://jeu.tscn")
