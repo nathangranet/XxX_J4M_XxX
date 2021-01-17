@@ -53,3 +53,11 @@ func _process(delta):
 		$score2.text = String(score)
 		$AnimationPlayer.play("se_casse")
 	$rendu.text = String(rendu)
+	$Label2.text = String(int($Timer.time_left))
+
+
+func _on_Timer_timeout():
+	var tmp = load("res://end.tscn")
+	var inst = tmp.instance()
+	inst.score = score
+	get_tree().change_scene_to(inst)

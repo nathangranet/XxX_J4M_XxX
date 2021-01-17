@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://jeu.gd" type="Script" id=1]
 [ext_resource path="res://persogodot.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://ressource/dollar/coins10dol.png" type="Texture" id=12]
 [ext_resource path="res://ressource/dollar/coins100dol.png" type="Texture" id=13]
 [ext_resource path="res://omg_particle.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ressource/[ONTIVA.COM]-No Copyright Epic Dubstep Premium Royalty Free Music-HQ.ogg" type="AudioStream" id=15]
+[ext_resource path="res://ressource/background.png" type="Texture" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "débarque_dans_le_game"
@@ -57,15 +59,23 @@ font_data = ExtResource( 3 )
 size = 50
 font_data = ExtResource( 3 )
 
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 3 )
+
 [node name="jeu" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 16 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/débarque_dans_le_game" = SubResource( 1 )
 anims/se_casse = SubResource( 2 )
 
 [node name="bonome" type="Sprite" parent="."]
-position = Vector2( -500, 600 )
+position = Vector2( 1000, 600 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
@@ -321,3 +331,34 @@ one_shot = true
 preprocess = 0.0
 speed_scale = 3.0
 explosiveness = 0.8
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 301.0
+margin_right = 360.0
+margin_bottom = 344.0
+custom_fonts/font = SubResource( 6 )
+text = "Time"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 368.96
+margin_top = 303.7
+margin_right = 535.96
+margin_bottom = 352.7
+custom_fonts/font = SubResource( 6 )
+text = "Time"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
