@@ -75,7 +75,7 @@ texture = ExtResource( 16 )
 anims/se_casse = SubResource( 2 )
 
 [node name="bonome" type="Sprite" parent="."]
-position = Vector2( 1000, 600 )
+position = Vector2( -500, 600 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
@@ -360,6 +360,17 @@ margin_right = 535.96
 margin_bottom = 352.7
 custom_fonts/font = SubResource( 6 )
 text = "Time"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 825.046
+margin_top = 1033.97
+margin_right = 1026.05
+margin_bottom = 1082.97
+custom_fonts/font = SubResource( 6 )
+text = "0=PAY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
