@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://font/Cute Notes.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://menu.gd" type="Script" id=2]
@@ -31,6 +31,8 @@
 [ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0019.png" type="Texture" id=29]
 [ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0024.png" type="Texture" id=30]
 [ext_resource path="res://ressource/omg/Explosion+1.wav" type="AudioStream" id=31]
+[ext_resource path="res://ressource/background.png" type="Texture" id=32]
+[ext_resource path="res://ressource/omg.png" type="Texture" id=33]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -76,6 +78,11 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+z_index = -100
+texture = ExtResource( 32 )
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
 position = Vector2( 1684.1, 323.634 )
@@ -193,6 +200,10 @@ stream = ExtResource( 31 )
 [node name="Timer5" type="Timer" parent="Node"]
 
 [node name="Timer6" type="Timer" parent="Node"]
+
+[node name="omg" type="Sprite" parent="."]
+position = Vector2( 273.778, 733.664 )
+texture = ExtResource( 33 )
 [connection signal="timeout" from="Node/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Node/Timer2" to="." method="_on_Timer2_timeout"]
 [connection signal="timeout" from="Node/Timer3" to="." method="_on_Timer3_timeout"]
