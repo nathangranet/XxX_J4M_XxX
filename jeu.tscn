@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://jeu.gd" type="Script" id=1]
 [ext_resource path="res://persogodot.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://ressource/coins/coinss1cent.png" type="Texture" id=11]
 [ext_resource path="res://ressource/dollar/coins10dol.png" type="Texture" id=12]
 [ext_resource path="res://ressource/dollar/coins100dol.png" type="Texture" id=13]
+[ext_resource path="res://omg_particle.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "débarque_dans_le_game"
@@ -304,3 +305,19 @@ text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Particles2D" parent="." instance=ExtResource( 14 )]
+emitting = false
+one_shot = true
+preprocess = 0.0
+speed_scale = 3.0
+explosiveness = 0.8
+
+[node name="Particles2D2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1902.93, 1068.98 )
+scale = Vector2( -1, 1 )
+emitting = false
+one_shot = true
+preprocess = 0.0
+speed_scale = 3.0
+explosiveness = 0.8

@@ -50,4 +50,6 @@ func _process(delta):
 		rendu = 0
 		$score2.text = String(score)
 		$AnimationPlayer.play("se_casse")
+		$Particles2D.emitting = true
+		$Particles2D2.emitting = true
 	$rendu.text = String(rendu)
