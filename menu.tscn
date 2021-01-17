@@ -32,7 +32,7 @@
 [ext_resource path="res://ressource/omg/PixelSimulations/Explosion4/0024.png" type="Texture" id=30]
 [ext_resource path="res://ressource/omg/Explosion+1.wav" type="AudioStream" id=31]
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 17 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 18 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 24 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 28 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 25 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 19 ) ],
 "loop": false,
@@ -40,7 +40,7 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=2]
 emission_shape = 2
 emission_box_extents = Vector3( 860, 1, 1 )
 flag_disable_z = true
@@ -51,7 +51,7 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 0.3
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 75
 font_data = ExtResource( 1 )
 
@@ -59,7 +59,7 @@ font_data = ExtResource( 1 )
 size = 50
 font_data = ExtResource( 5 )
 
-[sub_resource type="ParticlesMaterial" id=3]
+[sub_resource type="ParticlesMaterial" id=5]
 flag_disable_z = true
 direction = Vector3( 1, -1, 0 )
 spread = 15.0
@@ -80,27 +80,27 @@ __meta__ = {
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
 position = Vector2( 1684.1, 323.634 )
 scale = Vector2( 5.5, 5.5 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1570.23, 815.079 )
 scale = Vector2( 7, 7 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 
 [node name="AnimatedSprite6" type="AnimatedSprite" parent="."]
 position = Vector2( 1144.8, 259.489 )
 scale = Vector2( 7, 7 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
 position = Vector2( 409.24, 558.995 )
 scale = Vector2( 7, 7 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 
 [node name="AnimatedSprite5" type="AnimatedSprite" parent="."]
 position = Vector2( 782.51, 948.495 )
 scale = Vector2( 10, 10 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 
 [node name="Particles2D3" type="Particles2D" parent="."]
 position = Vector2( 940.204, -26.916 )
@@ -108,7 +108,7 @@ z_index = -20
 amount = 60
 lifetime = 5.0
 preprocess = 5.0
-process_material = SubResource( 1 )
+process_material = SubResource( 2 )
 texture = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
@@ -118,7 +118,7 @@ margin_left = -470.0
 margin_top = 200.0
 margin_right = 470.0
 margin_bottom = 73.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Cashier extreme"
 align = 1
 __meta__ = {
@@ -145,7 +145,7 @@ position = Vector2( 12.6992, 1066.73 )
 amount = 50
 lifetime = 5.5
 preprocess = 6.0
-process_material = SubResource( 3 )
+process_material = SubResource( 5 )
 texture = ExtResource( 3 )
 
 [node name="Particles2D2" type="Particles2D" parent="."]
@@ -154,13 +154,13 @@ scale = Vector2( -1, 1 )
 amount = 50
 lifetime = 5.5
 preprocess = 6.0
-process_material = SubResource( 3 )
+process_material = SubResource( 5 )
 texture = ExtResource( 3 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 167.81, 179.797 )
 scale = Vector2( 6, 6 )
-frames = SubResource( 5 )
+frames = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 31 )

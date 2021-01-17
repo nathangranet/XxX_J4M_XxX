@@ -1,8 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://jeu.gd" type="Script" id=1]
 [ext_resource path="res://persogodot.png" type="Texture" id=2]
 [ext_resource path="res://font/Cute Notes.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://ressource/caisse.png" type="Texture" id=4]
+[ext_resource path="res://ressource/dollar/coins2dol.png" type="Texture" id=5]
+[ext_resource path="res://ressource/dollar/coins1dol.png" type="Texture" id=6]
+[ext_resource path="res://ressource/coins/coinss50cent.png" type="Texture" id=7]
+[ext_resource path="res://ressource/coins/coinss10cent.png" type="Texture" id=8]
+[ext_resource path="res://ressource/dollar/coins50dol.png" type="Texture" id=9]
+[ext_resource path="res://ressource/coins/coinss5cent.png" type="Texture" id=10]
+[ext_resource path="res://ressource/coins/coinss1cent.png" type="Texture" id=11]
+[ext_resource path="res://ressource/dollar/coins10dol.png" type="Texture" id=12]
+[ext_resource path="res://ressource/dollar/coins100dol.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "débarque_dans_le_game"
@@ -42,6 +52,10 @@ font_data = ExtResource( 3 )
 size = 50
 font_data = ExtResource( 3 )
 
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 3 )
+
 [node name="jeu" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -54,29 +68,227 @@ position = Vector2( -500, 600 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 959.166, 536.537 )
-current = true
-zoom = Vector2( 1.2, 1.2 )
-
 [node name="acheter" type="Label" parent="."]
-margin_left = 169.08
-margin_top = 165.522
-margin_right = 345.08
-margin_bottom = 262.522
+margin_left = 378.778
+margin_top = 168.005
+margin_right = 418.778
+margin_bottom = 217.005
 custom_fonts/font = SubResource( 3 )
 text = "0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="score" type="Label" parent="."]
+margin_left = 791.99
+margin_top = 10.347
+margin_right = 1003.99
+margin_bottom = 59.347
+custom_fonts/font = SubResource( 3 )
+text = "Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score2" type="Label" parent="."]
+margin_left = 879.526
+margin_top = 76.0
+margin_right = 919.526
+margin_bottom = 125.0
+custom_fonts/font = SubResource( 3 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="acheter2" type="Label" parent="."]
+margin_left = 58.7194
+margin_top = 166.339
+margin_right = 317.719
+margin_bottom = 215.339
+custom_fonts/font = SubResource( 3 )
+text = "bought"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="don" type="Label" parent="."]
-margin_left = 169.734
-margin_top = 230.971
-margin_right = 258.734
-margin_bottom = 261.971
+margin_left = 381.0
+margin_top = 228.0
+margin_right = 421.0
+margin_bottom = 277.0
 custom_fonts/font = SubResource( 4 )
 text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="don2" type="Label" parent="."]
+margin_left = 57.9688
+margin_top = 232.005
+margin_right = 97.9688
+margin_bottom = 281.005
+custom_fonts/font = SubResource( 4 )
+text = "Paid"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -2.0
+margin_top = 742.0
+margin_right = 1920.0
+margin_bottom = 1093.0
+color = Color( 0.462745, 0.462745, 0.462745, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1033.98, 757.746 )
+scale = Vector2( 0.913189, 0.926509 )
+texture = ExtResource( 4 )
+
+[node name="ranger" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ranger"]
+position = Vector2( 134.547, 997.169 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="ranger"]
+position = Vector2( 268.253, 990.979 )
+texture = ExtResource( 10 )
+
+[node name="Sprite3" type="Sprite" parent="ranger"]
+position = Vector2( 413.608, 994.757 )
+texture = ExtResource( 8 )
+
+[node name="Sprite4" type="Sprite" parent="ranger"]
+position = Vector2( 561.608, 992.861 )
+texture = ExtResource( 7 )
+
+[node name="Sprite5" type="Sprite" parent="ranger"]
+position = Vector2( 772.275, 1000.48 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+
+[node name="Sprite6" type="Sprite" parent="ranger"]
+position = Vector2( 1014.27, 996.766 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+
+[node name="Sprite7" type="Sprite" parent="ranger"]
+position = Vector2( 1253.92, 999.963 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 12 )
+
+[node name="Sprite8" type="Sprite" parent="ranger"]
+position = Vector2( 1514.9, 998.662 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 9 )
+
+[node name="Sprite9" type="Sprite" parent="ranger"]
+position = Vector2( 1776.9, 1005.65 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="ranger"]
+margin_left = 32.0
+margin_top = 975.0
+margin_right = 72.0
+margin_bottom = 1024.0
+custom_fonts/font = SubResource( 5 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ranger"]
+margin_left = 181.0
+margin_top = 973.0
+margin_right = 221.0
+margin_bottom = 1022.0
+custom_fonts/font = SubResource( 5 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ranger"]
+margin_left = 315.552
+margin_top = 977.238
+margin_right = 357.552
+margin_bottom = 1026.24
+custom_fonts/font = SubResource( 5 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="ranger"]
+margin_left = 465.0
+margin_top = 977.0
+margin_right = 507.0
+margin_bottom = 1026.0
+custom_fonts/font = SubResource( 5 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="ranger"]
+margin_left = 630.276
+margin_top = 973.822
+margin_right = 672.276
+margin_bottom = 1022.82
+custom_fonts/font = SubResource( 5 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="ranger"]
+margin_left = 868.655
+margin_top = 975.941
+margin_right = 910.655
+margin_bottom = 1024.94
+custom_fonts/font = SubResource( 5 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="ranger"]
+margin_left = 1108.0
+margin_top = 975.0
+margin_right = 1150.0
+margin_bottom = 1024.0
+custom_fonts/font = SubResource( 5 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label8" type="Label" parent="ranger"]
+margin_left = 1352.74
+margin_top = 979.238
+margin_right = 1394.74
+margin_bottom = 1028.24
+custom_fonts/font = SubResource( 5 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label9" type="Label" parent="ranger"]
+margin_left = 1610.19
+margin_top = 976.059
+margin_right = 1652.19
+margin_bottom = 1025.06
+custom_fonts/font = SubResource( 5 )
+text = "9"
 __meta__ = {
 "_edit_use_anchors_": false
 }
